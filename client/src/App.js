@@ -4,6 +4,8 @@ import {useState} from 'react'
 import axios from 'axios'
 import Header from './components/Header'
 import Home from './pages/Home'
+import Profile from './pages/Profile'
+import Swipe from './pages/Profile'
 
 const App = () => {
 
@@ -13,9 +15,9 @@ const App = () => {
       <main>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="games/details/:gameId" element={<GameDetails />} />
-          <Route path="view/games/:genreId" element={<ViewGames />} />
+          <Route path="swipe" element={<Swipe />} />
+          <Route path="profile" element={<Profile />} />
+
         </Routes>
       </main>
     </div>
