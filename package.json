@@ -1,0 +1,23 @@
+{
+  "name": "dinr",
+  "version": "1.0.0",
+  "description": "Week of March 28th, 2022 *** [LinkedIn](https://www.linkedin.com/in/eric-lantz/) | [Github](https://github.com/ericmlantz) *** ### **Table of Contents** 1. [Description](#description) 2. [Technology](#technology) 3. [Getting Started](#started) 4. [Screenshots](#screenshots) 5. [Future Updates](#updates) 6. [Credits](#updates) ***",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericmlantz/dinr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericmlantz/dinr/issues"
+  },
+  "homepage": "https://github.com/ericmlantz/dinr#readme",
+  "dependencies": {
+    "mongoose": "^6.2.8"
+  }
+}
