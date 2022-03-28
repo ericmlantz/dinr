@@ -4,8 +4,10 @@
   "description": "Week of March 28th, 2022 *** [LinkedIn](https://www.linkedin.com/in/eric-lantz/) | [Github](https://github.com/ericmlantz) *** ### **Table of Contents** 1. [Description](#description) 2. [Technology](#technology) 3. [Getting Started](#started) 4. [Screenshots](#screenshots) 5. [Future Updates](#updates) 6. [Credits](#updates) ***",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ericmlantz/dinr.git"
@@ -18,8 +20,10 @@
   },
   "homepage": "https://github.com/ericmlantz/dinr#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3",
-    "mongoose": "^6.2.8"
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
