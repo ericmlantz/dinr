@@ -26,4 +26,13 @@ const main = async () => {
       phone: '7706122727'
     },
   ]
+  await Restaurant.insertMany(restaurants)
+  console.log("Created some restaurants")
 }
+
+const run = async () => {
+  await main()
+  db.close()
+}
+
+run()
