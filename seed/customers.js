@@ -12,7 +12,7 @@ const main = async () => {
     }
   ]
 
-  await Customer.insertOne(customers)
+  await Customer.insertMany(customers)
   console.log('Created a new user')
 }
 const run = async () => {
