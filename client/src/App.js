@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
 import Swipe from './pages/Profile'
+import Match from './pages/Match'
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="swipe" element={<Swipe />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="matches" element={<Match />} />
         </Routes>
       </main>
     </div>

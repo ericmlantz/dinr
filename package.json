@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
-},
+    "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" "
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ericmlantz/dinr.git"
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ericmlantz/dinr#readme",
   "dependencies": {
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "mongoose": "^6.2.8",
