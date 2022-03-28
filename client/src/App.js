@@ -17,7 +17,6 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="swipe" element={<Swipe />} />
           <Route path="profile" element={<Profile />} />
-
         </Routes>
       </main>
     </div>

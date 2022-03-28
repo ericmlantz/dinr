@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 const Header = () => {
 
   return (
-    <header>
+    <header className = "navBar">
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/swipe">Swipe</Link>
-        <Link to="/profile">Profile</Link>
+        <Link className = "page-link" to="/">Home</Link>
+        <Link className = "page-link" to="/swipe">Swipe</Link>
+        <Link className = "page-link" to="/profile">Profile</Link>
       </nav>
     </header>
     )
