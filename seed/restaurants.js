@@ -12,7 +12,6 @@ const main = async () => {
       location: '1587 Howell Mill Rd, Atlanta, GA 30318',
       typeOfFood: 'American',
       description: 'Leave your typical burger joint notions at the door. We take the American classic and flip it on its head to deliver a unique culinary experience on a bun. FLIP is all about creating a modern, imaginative, chef-driven dining experience that gives all your senses a night out.',
-      restaurantFront: 'https://whtnwmg.sfo2.cdn.digitaloceanspaces.com/wp-content/uploads/2018/07/Flip-Burger-Boutique-Hsiao.jpg',
       bestDish: 'https://static.spotapps.co/web/flipburgerboutique--com/custom/about/bison_burger.jpg',
       phone: '4043431609'
     },
