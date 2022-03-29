@@ -1,10 +1,10 @@
 import Restaurants from "../components/Restaurants";
 
-const Swipe = ({restaurants}) => {
+const Swipe = ({restaurants, likedMatches}) => {
 
   return (
     <div className="swipe-page">
-      <Restaurants restaurants={restaurants} />
+      <Restaurants restaurants={restaurants} likedMatches={likedMatches}/>
     </div>
   )
 }

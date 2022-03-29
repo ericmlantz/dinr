@@ -9,4 +9,8 @@ router.post('/profile', controllers.addRestaurant)
 
 router.get('/swipe', controllers.getAllRestaurants)
 
+router.get('/mymatches', controllers.getCustomerMatches)
+
+router.put('/:customer_id/:restaurant_id', controllers.updateMatches)
+
 module.exports = router;

@@ -36,7 +36,6 @@ body {
 
 .top-page {
   background-image: linear-gradient(to right, #1c93ff, #00ff3f);
-
 }
 
 .title {
@@ -77,4 +76,10 @@ body {
 }
 .best-dish {
   width: 200px;
+}
+
+.choice-button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
 }

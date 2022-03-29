@@ -1,16 +1,16 @@
-import {useState} from 'react'
-import {Link} from 'react-router-dom'
-import axios from 'axios'
+import { useEffect } from "react";
+import Matched from "../components/Matched";
 
-const Match = () => {
+const Match = ({matches, getMatches}) => {
 
+  useEffect(() => {
+    getMatches()
+  }, [])
   return (
-    <div>
-
+    <div className="swipe-page">
+      <Matched matches={matches} />
     </div>
-
   )
-
 }
 
 export default Match
