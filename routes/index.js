@@ -5,6 +5,8 @@ const router = Router();
 
 router.get('/', (req, res) => res.send('Dinr'))
 
-router.post('/addrestaurant', controllers.addRestaurant)
+router.post('/profile', controllers.addRestaurant)
+
+router.get('/swipe', controllers.getAllRestaurants)
 
 module.exports = router;

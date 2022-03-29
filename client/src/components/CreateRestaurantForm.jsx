@@ -11,7 +11,7 @@ const CreateRestaurantForm = (props) => {
           <input
             type="text"
             value={props.name}
-            placeholder="Enter restaurant Name:"
+            placeholder="Restaurant Name"
             onChange={props.handleNameChange}
           />
         </div>
@@ -20,7 +20,7 @@ const CreateRestaurantForm = (props) => {
           <input
             type="text"
             value={props.logo}
-            placeholder="Enter logo url"
+            placeholder="Logo Image URL"
             onChange={props.handleLogoChange}
           />
         </div>
@@ -29,7 +29,7 @@ const CreateRestaurantForm = (props) => {
           <input
             type="text"
             value={props.location}
-            placeholder="Enter restaurant address"
+            placeholder="Street, City, State Zip"
             onChange={props.handleLocationChange}
           />
         </div>
@@ -38,7 +38,7 @@ const CreateRestaurantForm = (props) => {
           <input
             type="text"
             value={props.typeOfFood}
-            placeholder="Enter food type"
+            placeholder="Pick from Dropdown"
             onChange={props.handleTypeOfFoodChange}
           />
         </div>
@@ -47,7 +47,7 @@ const CreateRestaurantForm = (props) => {
           <input
             type="text"
             value={props.description}
-            placeholder="Enter food type"
+            placeholder="Restaurant Description"
             onChange={props.handleDescriptionChange}
           />
         </div>
@@ -56,7 +56,7 @@ const CreateRestaurantForm = (props) => {
           <input
             type="text"
             value={props.bestDish}
-            placeholder="Enter best item image url"
+            placeholder="Popular Dish Image URL"
             onChange={props.handleBestDishChange}
           />
         </div>
@@ -65,7 +65,7 @@ const CreateRestaurantForm = (props) => {
           <input
             type="text"
             value={props.phone}
-            placeholder="Enter food type"
+            placeholder="Restaurant Phone Number"
             onChange={props.handlePhoneChange}
           />
         </div>

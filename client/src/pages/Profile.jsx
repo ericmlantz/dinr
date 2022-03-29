@@ -1,8 +1,6 @@
 import {useState} from 'react'
-import {Link} from 'react-router-dom'
 import axios from 'axios'
 import CreateRestaurantForm from "../components/CreateRestaurantForm";
-
 
 
 const Profile = () => {
@@ -11,14 +9,9 @@ const Profile = () => {
     const [logo, setLogo] = useState('')
     const [location, setLocation] = useState('')
     const [typeOfFood, setTypeOfFood] = useState('')
-    const [description, setDescrition] = useState('')
+    const [description, setDescription] = useState('')
     const [bestDish, setBestDish] = useState('')
     const [phone, setPhone] = useState('')
-
-
-  const fetchRestaurants = async () => {
-      const response = await axios.get('http://localhost:3001/profile')
-  }
 
   const handleNameChange = (event) => {
       setName(event.target.value)
@@ -33,7 +26,7 @@ const Profile = () => {
       setTypeOfFood(event.target.value)
   }
   const handleDescriptionChange = (event) => {
-    setDescrition(event.target.value)
+    setDescription(event.target.value)
   }
   const handleBestDishChange = (event) => {
       setBestDish(event.target.value)
@@ -46,7 +39,7 @@ const Profile = () => {
     const createRestaurantForm = async (event) => {
       event.preventDefault()
     await axios
-      .post('http://localhost:3001/addrestaurant', {
+      .post('http://localhost:3001/profile', {
         name: name,
         logo: logo,
         location: location,
@@ -56,7 +49,7 @@ const Profile = () => {
         phone: phone,
       })
       .then(function (response) {
-        fetchRestaurants()
+        
       })
       .catch(function (error) {
         console.log(error)
@@ -65,7 +58,7 @@ const Profile = () => {
     setLogo('')
     setLocation('')
     setTypeOfFood('')
-    setDescrition('')
+    setDescription('')
     setBestDish('')
     setPhone('')
   }
@@ -89,11 +82,8 @@ const Profile = () => {
         handlePhoneChange={handlePhoneChange}
         createRestaurant={createRestaurantForm}
         />
-      <Restaurant restaurant={restaurant} />
     </div>
-
   )
-
 }
 
 export default Profile

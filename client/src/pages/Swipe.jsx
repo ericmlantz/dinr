@@ -1,18 +1,12 @@
-import {useState} from 'react'
-import {Link} from 'react-router-dom'
-import axios from 'axios'
+import Restaurants from "../components/Restaurants";
 
-
-
-const Swipe = () => {
+const Swipe = ({restaurants}) => {
 
   return (
-    <div>
-
+    <div className="swipe-page">
+      <Restaurants restaurants={restaurants} />
     </div>
-
   )
-
 }
 
 export default Swipe
