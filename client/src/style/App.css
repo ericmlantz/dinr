@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  font-family: Tahoma;
 }
 
 .navBar {
@@ -7,7 +7,6 @@
   justify-content: space-evenly;
   background-color: #333;
   overflow: hidden;
-
 }
 
 .navBar .page-link {
@@ -17,8 +16,34 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  transition: all .2s ease-in-out;
 }
 
 .page-link:hover {
-  background-color: #1c93ff;
+  background-color: #ffffff;
+  color: #1c93ff;
+  transform: scale(1.2);
+}
+
+.homepage {
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.top-page {
+  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
+
+}
+
+.title {
+  font-size: 400%;
+}
+
+.bottom-page {
+  background-color: white;
+  grid-area: bottom-page;
+}
+
+img {
+  transform: translate(85%, 30%);
 }

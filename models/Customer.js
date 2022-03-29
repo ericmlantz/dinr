@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Customer = new Schema(       //Matches the file name and is singular and Pascal Case
+const Customer = new Schema(       //Match the file name and is singular and Pascal Case
   {
     name: { type: String, required: true},      //the type is capitalized usually. Example {type: String}
     location: { type: String, required: true},

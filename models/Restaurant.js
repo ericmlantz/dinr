@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Restaurant = new Schema(       //Matches the file name and is singular and Pascal Case
+const Restaurant = new Schema(       //Match the file name and is singular and Pascal Case
   {
     name: { type: String, required: true},      //the type is capitalized usually. Example {type: String}
     logo: { type: String, required: true},
