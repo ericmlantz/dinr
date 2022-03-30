@@ -1,6 +1,11 @@
 import Restaurants from "../components/Restaurants";
+import { useEffect } from "react";
 
-const Swipe = ({restaurants, likedMatches, deleteRestaurants}) => {
+const Swipe = ({restaurants, likedMatches, deleteRestaurants, getRestaurants}) => {
+
+  useEffect(() => {
+    getRestaurants()
+  }, [])
 
   return (
     <div className="swipe-page">
