@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RestaurantCard = ({_id, name,logo,location,typeOfFood,description,bestDish,phone,likedMatches}) => {
+const RestaurantCard = ({_id, name,logo,location,typeOfFood,description,bestDish,phone,likedMatches, deleteRestaurants}) => {
   return (
     <div className="card-wrapper">
       <img className="logo" src={logo} alt={`${name} Logo`}/>
@@ -12,7 +12,7 @@ const RestaurantCard = ({_id, name,logo,location,typeOfFood,description,bestDish
       <p>{phone}</p>
       <div className="choice-button-wrapper">
         <button className='like-button' onClick={() => likedMatches(_id)}>Like</button>
-        <button className='dislike-button'>Dislike</button>
+        <button className='dislike-button'onClick={() => deleteRestaurants(_id)}>Dislike</button>
       </div>
     </div>
   )

@@ -12,6 +12,7 @@ const MatchedCard = ({name,logo,location,typeOfFood,description,bestDish,phone})
       <p>{phone}</p>
       <div className="choice-button-wrapper">
         <button className='dislike-button'>Dislike</button>
+        {/* onClick={() => (idx) */}
       </div>
     </div>
   )
