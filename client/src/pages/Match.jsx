@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Matched from "../components/Matched";
 
-const Match = ({matches, getMatches, restaurants, getRestaurants}) => {
+const Match = ({deleteMatches, matches, getMatches, restaurants, getRestaurants}) => {
 
   useEffect(() => {
     getMatches()
@@ -10,7 +10,7 @@ const Match = ({matches, getMatches, restaurants, getRestaurants}) => {
 
   return (
     <div className="swipe-page">
-      <Matched restaurants={restaurants} matches={matches}/>
+      <Matched restaurants={restaurants} matches={matches} deleteMatches={deleteMatches}/>
     </div>
   )
 }

@@ -70,16 +70,32 @@ body {
   height: 70%;
   border: black solid 1px;
 }
-.logo {
-  width: 10%;
-  box-shadow: 0px 1px 24px 0px #000000;
+.RestaurantCard_logo {
+  width: 15%;
+  margin: 2px;
 }
-.best-dish {
+
+.RestaurantCard_description {
+  
+  font-size: 14px;
+  margin: 10px 100px 10px 100px;
+}
+.RestaurantCard_bestDish {
   width: 200px;
 }
 
 .choice-button-wrapper {
   display: flex;
   justify-content: space-around;
+
   width: 250px;
+  margin: 20px;
+}
+
+.choice-button {
+  background-image: linear-gradient( #1c93ff, #00ff3f);
+  width: 80px;
+  padding: 10px;
+  border: 2px solid #00ff3f;
+  border-radius: 7px;
 }

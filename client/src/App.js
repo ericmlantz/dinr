@@ -19,9 +19,6 @@ const App = () => {
     const response = await axios.get('http://localhost:3001/swipe')
   setRestaurants(response.data.restaurants)
 }
-  useEffect(() => {
-  getRestaurants()
-}, [])
 
 // useEffect(() => {
 //   const getCustomers = async () => {
@@ -40,13 +37,21 @@ const getMatches = async () => {
 const likedMatches = async (restaurant_id) => {
   await axios
   .put(`http://localhost:3001/${customer_id}/${restaurant_id}`)
-
+  getMatches()
 }
 
 const deleteRestaurants = async (restaurant_id) => {
   await axios
     .delete(`http://localhost:3001/${restaurant_id}`)
     getRestaurants()
+    likedMatches()
+}
+
+const deleteMatches = async (restaurant_id) => {
+  await axios
+    .delete(`http://localhost:3001/matches/${restaurant_id}`)
+    getRestaurants()
+    likedMatches()
 }
 
   return (
@@ -55,9 +60,9 @@ const deleteRestaurants = async (restaurant_id) => {
       <main>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="swipe" element={<Swipe getRestaurants={getRestaurants} restaurants={restaurants} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants} matches={matches}/>}/>
+          <Route path="swipe" element={<Swipe getRestaurants={getRestaurants} getMatches={getMatches} restaurants={restaurants} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants} matches={matches}/>}/>
           <Route path="profile" element={<Profile/>}/>
-          <Route path="matches" element={<Match getRestaurants={getRestaurants} restaurants={restaurants} getMatches={getMatches} matches={matches}/>} />
+          <Route path="matches" element={<Match deleteMatches={deleteMatches} getRestaurants={getRestaurants} restaurants={restaurants} getMatches={getMatches} matches={matches} />} />
         </Routes>
       </main>
     </div>

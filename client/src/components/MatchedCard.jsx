@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MatchedCard = ({name,logo,location,typeOfFood,description,bestDish,phone}) => {
+const MatchedCard = ({_id,name,logo,location,typeOfFood,description,bestDish,phone, deleteMatches}) => {
   return (
     <div className="card-wrapper">
       <img className="logo" src={logo} alt={`${name} Logo`}/>
@@ -11,8 +11,7 @@ const MatchedCard = ({name,logo,location,typeOfFood,description,bestDish,phone})
       <img className="best-dish" src={bestDish} alt="Popular Dish" />
       <p>{phone}</p>
       <div className="choice-button-wrapper">
-        <button className='dislike-button'>Dislike</button>
-        {/* onClick={() => (idx) */}
+        <button className='dislike-button' onClick={() => deleteMatches(_id)}>Unmatch</button>
       </div>
     </div>
   )

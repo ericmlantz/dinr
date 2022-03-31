@@ -1,3 +1,4 @@
+const db = require('../db')
 const {Restaurant, Customer} = require('../models')
 
 const addRestaurant = async (req, res) => {
@@ -59,10 +60,31 @@ const deleteRestaurants = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
+
+const deleteMatches = async (req, res) => {
+  try {
+    const {restaurant_id} = req.params
+    const customer = await Customer.find()
+    let matches=customer[0].matchedRestaurants
+    for(let i=0; i<matches.length; i++) {
+      if(matches[i]._id===restaurant_id) {
+        matches.splice(i, 1)
+      }
+    }
+    if (deleted) {
+      return res.status(200).send('Match deleted')
+    }
+    throw new Error('Match not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   addRestaurant,
   getAllRestaurants,
   getCustomerMatches,
   updateMatches,
-  deleteRestaurants
+  deleteRestaurants,
+  deleteMatches
 }

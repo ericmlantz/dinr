@@ -15,4 +15,6 @@ router.put('/:customer_id/:restaurant_id', controllers.updateMatches)
 
 router.delete('/:restaurant_id', controllers.deleteRestaurants)
 
+router.delete('/matches/:restaurant_id', controllers.deleteMatches)
+
 module.exports = router;
