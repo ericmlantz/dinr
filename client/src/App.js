@@ -31,17 +31,16 @@ const App = () => {
 // getCustomers()
 // }, [])
 
-
-const likedMatches = async (restaurant_id) => {
-  await axios
-  .put(`http://localhost:3001/${customer_id}/${restaurant_id}`)
-}
-
 const getMatches = async () => {
   const response = await axios
   .get(`http://localhost:3001/mymatches`)
   setMatches(response.data)
-  
+}
+
+const likedMatches = async (restaurant_id) => {
+  await axios
+  .put(`http://localhost:3001/${customer_id}/${restaurant_id}`)
+
 }
 
 const deleteRestaurants = async (restaurant_id) => {
@@ -56,9 +55,9 @@ const deleteRestaurants = async (restaurant_id) => {
       <main>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="swipe" element={<Swipe getRestaurants={getRestaurants} restaurants={restaurants} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants}/>}/>
+          <Route path="swipe" element={<Swipe getRestaurants={getRestaurants} restaurants={restaurants} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants} matches={matches}/>}/>
           <Route path="profile" element={<Profile/>}/>
-          <Route path="matches" element={<Match restaurants={restaurants} getMatches={getMatches} matches={matches}/>} />
+          <Route path="matches" element={<Match getRestaurants={getRestaurants} restaurants={restaurants} getMatches={getMatches} matches={matches}/>} />
         </Routes>
       </main>
     </div>

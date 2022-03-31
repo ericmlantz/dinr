@@ -2,7 +2,6 @@ import React from 'react'
 import MatchedCard from "./MatchedCard"
 
 const Matched = ({matches}) => {
-  console.log(matches)
   return (
     <div>
       <h1>Matches</h1>
