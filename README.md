@@ -40,8 +40,8 @@ The project itself was deployed and can be viewed [here.](https://rhubarb-cupcak
 ### ***Screenshots***
 <a id="screenshots"></a>
 
-#### **Company Logo**
-![Image](imageurl)
+#### **Card Style**
+![Image](https://i.imgur.com/8N6Z99R.png)
 ***
 <a id="updates"></a>
 ### ***Future Updates***
