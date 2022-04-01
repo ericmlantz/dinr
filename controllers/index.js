@@ -69,16 +69,17 @@ const deleteMatches = async (req, res) => {
     for(let i=0; i<matches.length; i++) {
       if(matches[i]._id===restaurant_id) {
         matches.splice(i, 1)
+        return res.status(200).send('Match deleted')
+      }
+      else {
+        throw new Error('Match not found')
       }
     }
-    if (deleted) {
-      return res.status(200).send('Match deleted')
-    }
-    throw new Error('Match not found')
-  } catch (error) {
+    } catch (error) {
     return res.status(500).send(error.message)
   }
 }
+  
 
 module.exports = {
   addRestaurant,

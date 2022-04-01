@@ -1,8 +1,7 @@
 import React from 'react'
 import RestaurantCard from "./RestaurantCard"
-import { useEffect } from 'react'
 
-const Restaurants = ({restaurants, getRestaurants, likedMatches, deleteRestaurants, matches}) => {
+const Restaurants = ({restaurants, likedMatches, deleteRestaurants, matches}) => {
 
   let idArray = []
   matches.forEach(match => {

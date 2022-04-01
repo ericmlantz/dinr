@@ -1,6 +1,6 @@
 import './style/App.css';
 import { Routes, Route} from "react-router-dom";
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import axios from 'axios'
 import Header from './components/Header'
 import Home from './pages/Home'
@@ -20,13 +20,6 @@ const App = () => {
   setRestaurants(response.data.restaurants)
 }
 
-// useEffect(() => {
-//   const getCustomers = async () => {
-//   const response = await axios.get('http://localhost:3001/profile/customers')
-// setCustomers(response.data.customers)
-// }
-// getCustomers()
-// }, [])
 
 const getMatches = async () => {
   const response = await axios
@@ -47,9 +40,9 @@ const deleteRestaurants = async (restaurant_id) => {
     likedMatches()
 }
 
-const deleteMatches = async (restaurant_id) => {
+const deleteMatches = async (_id) => {
   await axios
-    .delete(`http://localhost:3001/matches/${restaurant_id}`)
+    .delete(`http://localhost:3001/matches/${_id}`)
     getRestaurants()
     likedMatches()
 }
