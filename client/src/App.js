@@ -8,7 +8,7 @@ import Profile from './pages/Profile'
 import Swipe from './pages/Swipe'
 import Match from './pages/Match'
 
-let customer_id="6241f190261d3276e5f1ec43"
+let customer_id="6247255400b64ef0048f5f17"
 
 const App = () => {
 
