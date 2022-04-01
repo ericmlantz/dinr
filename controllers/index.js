@@ -64,15 +64,12 @@ const deleteRestaurants = async (req, res) => {
 const deleteMatches = async (req, res) => {
   try {
     const {restaurant_id} = req.params
-    const customer = await Customer.find()
+    const customer = await Customer.find().populate("matchedRestaurants")
     let matches=customer[0].matchedRestaurants
     for(let i=0; i<matches.length; i++) {
-      if(matches[i]._id===restaurant_id) {
+      if(matches[i]._id.toString()===restaurant_id) {
         matches.splice(i, 1)
         return res.status(200).send('Match deleted')
-      }
-      else {
-        throw new Error('Match not found')
       }
     }
     } catch (error) {
