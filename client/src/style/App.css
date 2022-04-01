@@ -4,13 +4,14 @@ body {
 }
 
 .App {
-  font-family: Tahoma;
+  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
 }
 .navBar {
   display: flex;
   justify-content: space-evenly;
   background-color: #333;
   overflow: hidden;
+  font-family: 'Lobster', cursive;
 }
 
 .navBar .page-link {
@@ -24,31 +25,27 @@ body {
 }
 
 .page-link:hover {
-  background-color: #ffffff;
-  color: #1c93ff;
+  font-size: 17px;
+  background: -webkit-linear-gradient( #00ff3f,#1c93ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: scale(1.2);
 }
 
 .homepage {
-  flex-direction: row-reverse;
-  width: 100%;
-}
-
-.top-page {
   background-image: linear-gradient(to right, #1c93ff, #00ff3f);
+flex-direction: row-reverse;
+  width: 100%;
 }
 
 .title {
   font-size: 400%;
-}
-
-.bottom-page {
-  background-color: white;
-  grid-area: bottom-page;
+  font-family: 'Lobster', cursive;
 }
 
 .computer-img {
   transform: translate(85%, 30%);
+
 }
 
 .swipe-page {
@@ -56,11 +53,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
 }
 
 .card-wrapper {
   margin: 0 20% 5% 20%;
-
+  background: white;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -68,11 +66,16 @@ body {
   align-items: center;
   padding: 20px 20px 20px 20px;
   height: 70%;
-  border: black solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 15px;
 }
 .RestaurantCard_logo {
   width: 15%;
   margin: 2px;
+}
+
+.RestaurantCard_location {
+  margin: 10px;
 }
 
 .RestaurantCard_description {
@@ -95,9 +98,11 @@ body {
 .choice-button {
   background-image: linear-gradient(to bottom right, #1c93ff, #00ff3f);
   width: 120px;
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   border: none;
   border-radius:60px;
   color: white;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;}
+
