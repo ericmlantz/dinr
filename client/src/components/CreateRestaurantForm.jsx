@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreateRestaurantForm = (props) => {
   return (
-    <div className = "form-wrapper">
+    <div className="form-wrapper">
       <h1 className="form-header">Create Restaurant Profile</h1>
       <br/>
       <form onSubmit={props.createRestaurant}>

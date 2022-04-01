@@ -112,8 +112,9 @@ flex-direction: row-reverse;
 }
 
 .form-header {
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Lobster', cursive;
+  margin-bottom: -40px;
 }
 
 .form-wrapper {
@@ -132,6 +133,7 @@ flex-direction: row-reverse;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
+  color:;
 }
 
 input {
