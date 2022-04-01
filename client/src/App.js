@@ -16,33 +16,33 @@ const App = () => {
   const [matches, setMatches] = useState([])
   
   const getRestaurants = async () => {
-    const response = await axios.get('http://localhost:3001/swipe')
+    const response = await axios.get('/swipe')
   setRestaurants(response.data.restaurants)
 }
 
 
 const getMatches = async () => {
   const response = await axios
-  .get(`http://localhost:3001/mymatches`)
+  .get(`/mymatches`)
   setMatches(response.data)
 }
 
 const likedMatches = async (restaurant_id) => {
   await axios
-  .put(`http://localhost:3001/${customer_id}/${restaurant_id}`)
+  .put(`/${customer_id}/${restaurant_id}`)
   getMatches()
 }
 
 const deleteRestaurants = async (restaurant_id) => {
   await axios
-    .delete(`http://localhost:3001/${restaurant_id}`)
+    .delete(`/${restaurant_id}`)
     getRestaurants()
     likedMatches()
 }
 
 const deleteMatches = async (_id) => {
   await axios
-    .delete(`http://localhost:3001/matches/${_id}`)
+    .delete(`/matches/${_id}`)
     getRestaurants()
     likedMatches()
 }
