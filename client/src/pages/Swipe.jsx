@@ -10,8 +10,10 @@ const Swipe = ({restaurants, likedMatches, deleteRestaurants, getRestaurants, ma
   },[])
 
   return (
+    <div className="whole">
     <div className="swipe-page">
       <Restaurants restaurants={restaurants} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants} matches={matches} getRestaurants={getRestaurants}/>
+    </div>
     </div>
   )
 }

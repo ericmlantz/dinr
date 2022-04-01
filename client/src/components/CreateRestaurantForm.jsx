@@ -3,7 +3,7 @@ import React from 'react'
 const CreateRestaurantForm = (props) => {
   return (
     <div className = "form-wrapper">
-      <h1>Create Restaurant Profile</h1>
+      <h1 className="form-header">Create Restaurant Profile</h1>
       <br/>
       <form onSubmit={props.createRestaurant}>
         <div>
@@ -70,7 +70,7 @@ const CreateRestaurantForm = (props) => {
           />
         </div>
         <div className="button-wrapper">
-          <button type="submit">Submit</button>
+          <button className="submit-button" type="submit">Submit</button>
         </div>
       </form>
     </div>

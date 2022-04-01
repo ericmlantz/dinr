@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+.homepage {
+  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
+flex-direction: row-reverse;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

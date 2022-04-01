@@ -9,8 +9,10 @@ const Match = ({deleteMatches, matches, getMatches, restaurants, getRestaurants}
   }, [])
 
   return (
+    <div className="whole">
     <div className="swipe-page">
       <Matched restaurants={restaurants} matches={matches} deleteMatches={deleteMatches}/>
+    </div>
     </div>
   )
 }

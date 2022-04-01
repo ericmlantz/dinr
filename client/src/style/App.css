@@ -1,11 +1,14 @@
-body {
-  margin: 0;
-  padding: 0;
+.homepage {
+  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
+flex-direction: row-reverse;
+  width: 100%;
+  background-size: cover;
+}
+.whole {
+  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
+  height: 100vh;
 }
 
-.App {
-  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
-}
 .navBar {
   display: flex;
   justify-content: space-evenly;
@@ -27,25 +30,26 @@ body {
 .page-link:hover {
   font-size: 17px;
   background: -webkit-linear-gradient( #00ff3f,#1c93ff);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.2);
 }
 
-.homepage {
-  background-image: linear-gradient(to right, #1c93ff, #00ff3f);
-flex-direction: row-reverse;
-  width: 100%;
-}
-
 .title {
+  transform: translate(265px, 250px);
+  margin-bottom: 10px;
   font-size: 400%;
   font-family: 'Lobster', cursive;
+  color: white;
+}
+
+.home-description {
+  color: white;
+  transform: translate(150px, 250px);
 }
 
 .computer-img {
-  transform: translate(85%, 30%);
-
+  transform: translate(85%);
 }
 
 .swipe-page {
@@ -57,7 +61,7 @@ flex-direction: row-reverse;
 }
 
 .card-wrapper {
-  margin: 0 20% 5% 20%;
+  margin: 0 20% 2% 20%;
   background: white;
   box-sizing: border-box;
   display: flex;
@@ -105,4 +109,48 @@ flex-direction: row-reverse;
   font-family: 'Lobster', cursive;
   font-size: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.form-header {
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  line-height: 2;
+  font-size: 20px
+}
+
+.pageTitle {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 250px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 15px;
+  border: none;
+}
+
+.submit-button {
+  background: white;
+  margin-top: 10px;
+  padding: 10px 35px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 15px;
+  border: none;
+  font-size: 20px;
+  font-family: 'Lobster', cursive;
+  color: #17b9c4;
 }

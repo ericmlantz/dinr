@@ -63,7 +63,7 @@ const Profile = ({restaurants}) => {
 }
     
   return (
-    <div className='profile-page'>
+    <div className="whole">
       <CreateRestaurantForm
         name={name}
         logo={logo}

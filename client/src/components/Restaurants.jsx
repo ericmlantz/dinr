@@ -11,7 +11,7 @@ const Restaurants = ({restaurants, likedMatches, deleteRestaurants, matches}) =>
 
   return (
     <div>
-      <h1>Restaurants</h1>
+      <h1 className="pageTitle">Restaurants</h1>
       <div className="restaurants-wrapper">
         {restaurants.map((restaurant,idx) => {
           if(idArray.includes(restaurant._id)) {

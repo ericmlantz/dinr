@@ -8,7 +8,7 @@ import Profile from './pages/Profile'
 import Swipe from './pages/Swipe'
 import Match from './pages/Match'
 
-let customer_id="6247255400b64ef0048f5f17"
+let customer_id="6241f190261d3276e5f1ec43"
 
 const App = () => {
 
@@ -50,7 +50,7 @@ const deleteMatches = async (_id) => {
     <div>
       <Header />
       <main>
-        <Routes>
+        <Routes >
           <Route index element={<Home />} />
           <Route path="swipe" element={<Swipe getRestaurants={getRestaurants} getMatches={getMatches} restaurants={restaurants} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants} matches={matches}/>}/>
           <Route path="profile" element={<Profile/>}/>
