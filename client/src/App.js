@@ -12,7 +12,7 @@ let customer_id="624748687b04b1a490642f43"
 
 const App = () => {
 
-  const [restaurants, setRestaurants] = useState([{
+  const [restaurants, setRestaurants] = useState({
     name: ' ',
     logo: ' ',
     location: ' ',
@@ -20,7 +20,7 @@ const App = () => {
     description: ' ',
     bestDish: ' ',
     phone: ' '
-}])
+})
   const [matches, setMatches] = useState([])
   const [customers, setCustomers] = useState([])
   
