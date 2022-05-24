@@ -19,7 +19,6 @@ const App = () => {
   const getRestaurants = async () => {
     const response = await axios.get('/swipe')
   setRestaurants(response.data.restaurants)
-  console.log(response.data)
 }
 
 const getMatches = async () => {
