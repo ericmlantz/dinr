@@ -61,7 +61,7 @@ flex-direction: row-reverse;
 }
 
 .card-wrapper {
-  margin: 0 20% 2% 20%;
+  margin: 0 auto;
   background: white;
   box-sizing: border-box;
   display: flex;
@@ -72,6 +72,7 @@ flex-direction: row-reverse;
   height: 70%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 15px;
+  width: 500px;
 }
 .RestaurantCard_logo {
   width: 15%;
