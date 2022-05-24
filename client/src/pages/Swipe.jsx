@@ -6,7 +6,6 @@ const Swipe = ({restaurants, likedMatches, deleteRestaurants, getRestaurants, ma
 
   useEffect(() => {
     getRestaurants()
-    getMatches()
   },[])
 
   return (

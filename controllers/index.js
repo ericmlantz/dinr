@@ -76,13 +76,21 @@ const deleteMatches = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
-  
 
+const getAllCustomers = async (req, res) => {
+  try {
+    const customers = await Customer.find()
+    return res.status(200).json({ customers })
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+}
 module.exports = {
   addRestaurant,
   getAllRestaurants,
   getCustomerMatches,
   updateMatches,
   deleteRestaurants,
-  deleteMatches
+  deleteMatches,
+  getAllCustomers
 }

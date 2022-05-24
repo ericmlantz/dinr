@@ -1,9 +1,11 @@
 import {useState} from 'react'
 import axios from 'axios'
 import CreateRestaurantForm from "../components/CreateRestaurantForm";
+import { useNavigate } from 'react-router-dom';
 
 
 const Profile = ({restaurants}) => {
+  const navigate = useNavigate()
 
   const [name, setName] = useState('')
     const [logo, setLogo] = useState('')
@@ -60,6 +62,7 @@ const Profile = ({restaurants}) => {
   setDescription('')
   setBestDish('')
   setPhone('')
+  navigate('/swipe')
 }
     
   return (

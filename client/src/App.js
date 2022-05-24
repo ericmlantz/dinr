@@ -14,10 +14,12 @@ const App = () => {
 
   const [restaurants, setRestaurants] = useState([])
   const [matches, setMatches] = useState([])
+  const [customers, setCustomers] = useState([])
   
   const getRestaurants = async () => {
     const response = await axios.get('/swipe')
   setRestaurants(response.data.restaurants)
+  console.log(response.data)
 }
 
 const getMatches = async () => {
@@ -26,9 +28,14 @@ const getMatches = async () => {
   setMatches(response.data)
 }
 
+const getAllCustomers = async () => {
+  const response = await axios.get('/allcustomers')
+  console.log(response)
+  setCustomers(response.data.customer_id)
+}
 const likedMatches = async (restaurant_id) => {
   await axios
-  .put(`/${customer_id}/${restaurant_id}`)
+  .put(`/${customer_id}/restaurant/${restaurant_id}`)
   getMatches()
 }
 
