@@ -61,7 +61,7 @@ flex-direction: row-reverse;
 }
 
 .card-wrapper {
-  margin: 0 auto;
+  margin: 20px auto;
   background: white;
   box-sizing: border-box;
   display: flex;
@@ -134,7 +134,8 @@ flex-direction: row-reverse;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: blue;
+  color: #333;
+  text-shadow: .5px 1px #f2f2f2;
 }
 
 input {

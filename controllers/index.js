@@ -37,11 +37,11 @@ const getCustomerMatches = async (req, res) => {
 
 const updateMatches = async (req, res) => {
   try {
-    const {customer_id, restaurant_id} = req.params
+    const {restaurant_id} = req.params //replaced the following: const {customer_id, restaurant_id} = req.params
     const customer = await Customer.find()
       let matches=customer[0].matchedRestaurants
       matches.push(restaurant_id)
-      const updatedMatch = await Customer.updateOne({_id:customer_id},{$addToSet: {matchedRestaurants:matches}})
+      const updatedMatch = await Customer.updateOne({$addToSet: {matchedRestaurants:matches}})
       return res.status(200).json({updatedMatch})
   } catch (error) {
     return res.status(500).send(error.message);
@@ -61,7 +61,7 @@ const deleteRestaurants = async (req, res) => {
   }
 }
 
-const deleteMatches = async (req, res) => {
+const deleteMatches2 = async (req, res) => {
   try {
     const {restaurant_id} = req.params
     const customer = await Customer.find().populate("matchedRestaurants")
@@ -69,6 +69,22 @@ const deleteMatches = async (req, res) => {
     for(let i=0; i<matches.length; i++) {
       if(matches[i]._id.toString()===restaurant_id) {
         matches.splice(i, 1)
+        return res.status(200).send('Match deleted')
+      }
+    }
+    } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const deleteMatches = async (req, res) => {
+  try {
+    const {restaurant_id} = req.params
+    const customer = await Customer.find().populate("matchedRestaurants")
+    let matches=customer[0].matchedRestaurants
+    for(let i=0; i<matches.length; i++) {
+      if(matches[i]._id.toString()===restaurant_id) {
+        matches.slice(i, 1)
         return res.status(200).send('Match deleted')
       }
     }

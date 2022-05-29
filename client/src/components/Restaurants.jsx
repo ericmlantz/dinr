@@ -8,7 +8,7 @@ const Restaurants = ({restaurants, likedMatches, deleteRestaurants, matches}) =>
     idArray.push(match._id)
   });
   console.log("idArray:", idArray)
-
+  
   return (
     <div>
       <h1 className="pageTitle">Restaurants</h1>

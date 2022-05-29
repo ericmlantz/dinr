@@ -40,7 +40,7 @@ const Profile = ({restaurants}) => {
   const createRestaurantForm = async (event) => {
     event.preventDefault()
   await axios
-    .post('/profile', {
+    .post('http://localhost:3001/profile', {
       name: name,
       logo: logo,
       location: location,

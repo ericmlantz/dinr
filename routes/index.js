@@ -11,11 +11,14 @@ router.get('/swipe', controllers.getAllRestaurants)
 
 router.get('/mymatches', controllers.getCustomerMatches)
 
-router.delete('/matches/:restaurant_id', controllers.deleteMatches)
+router.put('/restaurants/:restaurant_id', controllers.updateMatches)
 
-router.put('/:customer_id/:restaurant_id', controllers.updateMatches)
+router.delete('/restaurants/delete/:restaurant_id', controllers.deleteRestaurants)
 
-router.delete('/restaurant/:restaurant_id', controllers.deleteRestaurants)
+
+router.delete('/mymatches/delete/:restaurant_id', controllers.deleteMatches)
+
+
 
 router.get('/allcustomers', controllers.getAllCustomers)
 

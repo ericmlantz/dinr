@@ -17,37 +17,38 @@ const App = () => {
   const [customers, setCustomers] = useState([])
   
   const getRestaurants = async () => {
-    const response = await axios.get('/swipe')
+    const response = await axios.get('http://localhost:3001/swipe')
   setRestaurants(response.data.restaurants)
 }
 
 const getMatches = async () => {
   const response = await axios
-  .get(`/mymatches`)
+  .get(`http://localhost:3001/mymatches`)
   setMatches(response.data)
+  console.log('matches',matches)
 }
 
 const getAllCustomers = async () => {
-  const response = await axios.get('/allcustomers')
+  const response = await axios.get('http://localhost:3001/allcustomers')
   console.log(response)
   setCustomers(response.data.customer_id)
 }
 const likedMatches = async (restaurant_id) => {
   await axios
-  .put(`/${customer_id}/restaurant/${restaurant_id}`)
+  .put(`http://localhost:3001/restaurants/${restaurant_id}`)
   getMatches()
 }
 
 const deleteRestaurants = async (restaurant_id) => {
   await axios
-    .delete(`/${restaurant_id}`)
+    .delete(`http://localhost:3001/restaurants/delete/${restaurant_id}`)
     getRestaurants()
     likedMatches()
 }
 
-const deleteMatches = async (_id) => {
+const deleteMatches = async (restaurant_id) => {
   await axios
-    .delete(`/matches/${_id}`)
+    .delete(`http://localhost:3001/mymatches/${restaurant_id}`)
     getRestaurants()
     likedMatches()
 }
@@ -57,10 +58,11 @@ const deleteMatches = async (_id) => {
       <Header />
       <main>
         <Routes >
-          <Route index element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path="swipe" element={<Swipe getRestaurants={getRestaurants} getMatches={getMatches} restaurants={restaurants} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants} matches={matches}/>}/>
           <Route path="profile" element={<Profile/>}/>
-          <Route path="matches" element={<Match deleteMatches={deleteMatches} getRestaurants={getRestaurants} restaurants={restaurants} getMatches={getMatches} matches={matches} />} />
+          <Route path="mymatches" element={<Match deleteMatches={deleteMatches} 
+          deleteRestaurants={deleteRestaurants}getRestaurants={getRestaurants} restaurants={restaurants} getMatches={getMatches} matches={matches} likedMatches={likedMatches}/>} />
         </Routes>
       </main>
     </div>
