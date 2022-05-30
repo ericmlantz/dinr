@@ -41,15 +41,13 @@ const likedMatches = async (restaurant_id) => {
 
 const deleteRestaurants = async (restaurant_id) => {
   await axios
-    .delete(`http://localhost:3001/restaurants/delete/${restaurant_id}`)
+    .delete(`http://localhost:3001/restaurants/${restaurant_id}`)
     getRestaurants()
-    likedMatches()
 }
 
 const deleteMatches = async (restaurant_id) => {
   await axios
     .delete(`http://localhost:3001/mymatches/${restaurant_id}`)
-    getRestaurants()
     likedMatches()
 }
 

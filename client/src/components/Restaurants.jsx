@@ -18,7 +18,7 @@ const Restaurants = ({restaurants, likedMatches, deleteRestaurants, matches}) =>
             restaurants.splice(idx, 1)
             console.log("restaurant:", restaurants)
           }else{
-            return <RestaurantCard key={restaurant._id} {...restaurant} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants}/>
+            return <RestaurantCard key={restaurant._id} restaurant={restaurant} {...restaurant} likedMatches={likedMatches} deleteRestaurants={deleteRestaurants}/>
           }
         })}
       </div>

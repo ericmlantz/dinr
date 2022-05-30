@@ -10,9 +10,13 @@ const Match = ({deleteRestaurants, deleteMatches, matches, getMatches, restauran
 
   return (
     <div className="whole">
+      {matches ?
     <div className="swipe-page">
       <Matched restaurants={restaurants} matches={matches} deleteMatches={deleteMatches} deleteRestaurants={deleteRestaurants}/>
     </div>
+    : <div className="card-wrapper">
+        <h1>No Matches Found</h1>
+      </div>}
     </div>
   )
 }

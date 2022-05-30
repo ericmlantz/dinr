@@ -13,10 +13,10 @@ router.get('/mymatches', controllers.getCustomerMatches)
 
 router.put('/restaurants/:restaurant_id', controllers.updateMatches)
 
-router.delete('/restaurants/delete/:restaurant_id', controllers.deleteRestaurants)
+router.delete('/restaurants/:restaurant_id', controllers.deleteRestaurants)
 
 
-router.delete('/mymatches/delete/:restaurant_id', controllers.deleteMatches)
+router.delete('/mymatches/:restaurant_id', controllers.deleteMatches)
 
 
 

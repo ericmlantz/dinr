@@ -8,7 +8,7 @@ const Matched = ({likedMatches,matches, deleteMatches, deleteRestaurants}) => {
       <div className="restaurants-wrapper">
         {matches.map((match) => (
           <MatchedCard key={match._id} {...match} deleteMatches={deleteMatches}
-          deteleteRestaurants={deleteRestaurants}/>
+          deleteRestaurants={deleteRestaurants}/>
         ))} 
       </div>
     </div>

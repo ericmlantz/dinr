@@ -51,13 +51,14 @@ const updateMatches = async (req, res) => {
 const deleteRestaurants = async (req, res) => {
   try {
     const { restaurant_id } = req.params
+    console.log(restaurant_id)
     const deleted = await Restaurant.findByIdAndDelete(restaurant_id)
     if (deleted) {
       return res.status(200).send('Restaurant deleted')
     }
     throw new Error('Restaurant not found')
   } catch (error) {
-    return res.status(500).send(error.message)
+    // return res.status(500).send(error.message)
   }
 }
 
@@ -79,19 +80,18 @@ const deleteMatches2 = async (req, res) => {
 
 const deleteMatches = async (req, res) => {
   try {
-    const {restaurant_id} = req.params
-    const customer = await Customer.find().populate("matchedRestaurants")
-    let matches=customer[0].matchedRestaurants
-    for(let i=0; i<matches.length; i++) {
-      if(matches[i]._id.toString()===restaurant_id) {
-        matches.slice(i, 1)
-        return res.status(200).send('Match deleted')
-      }
+    const { restaurant_id } = req.params
+    console.log(restaurant_id)
+    const deleted = await Restaurant.findByIdAndDelete(restaurant_id)
+    if (deleted) {
+      return res.status(200).send('Restaurant deleted')
     }
-    } catch (error) {
-    return res.status(500).send(error.message)
+    throw new Error('Restaurant not found')
+  } catch (error) {
+    // return res.status(500).send(error.message)
   }
 }
+
 
 const getAllCustomers = async (req, res) => {
   try {
